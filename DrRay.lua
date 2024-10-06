@@ -1288,7 +1288,7 @@ local GlobalColor2 = Color3.fromRGB(0, 255, 38)
 local closed = false
 
 parent.TopBar.ProfileMenu.PlayerProfile.TextLabel.Text = game:GetService("Players").LocalPlayer.DisplayName
-parent.TopBar.ProfileMenu.PlayerProfile.ImageLabel.Image = game:GetService("Players"):GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+parent.TopBar.ProfileMenu.PlayerProfile.ImageLabel.Image = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
 
 
 function UILIB:Load(name, img, direction)
@@ -1638,7 +1638,7 @@ function UILIB.newTab(name, img)
 		newSlider.Title.Text = name
 		newSlider.Description.Text = desc
 
-		local Mouse = game.Players.LocalPlayer:GetMouse()
+		local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 		local tweenServ = twServ
 
 		local Trigger = newSlider.ActualSlider.Trigger
